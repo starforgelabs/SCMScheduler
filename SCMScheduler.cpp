@@ -3,7 +3,8 @@
 void SCMScheduler::run()
 {
   selectNextProcess();
-  processes[current]->execute();
+  if(processes[current] != NULL) 
+    processes[current]->execute();
 }
 
 // This is a very simple round robin scheduler
